@@ -11,10 +11,6 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "root":"build/",
-  "routes":{
-      "/**":"index.html"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -22,8 +18,8 @@
     "eject": "react-scripts eject"
   },
   "engines": { 
-      "node": "16.1.0",
-      "npm": "8.18.0"
+      "node": "^16.1.0",
+      "npm": "^8.13.2"
   },
   "eslintConfig": {
     "extends": [
