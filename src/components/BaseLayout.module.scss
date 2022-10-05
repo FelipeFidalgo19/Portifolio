@@ -10,7 +10,7 @@ footer {
   transition: all 400ms;
 
   a, i, li, p {
-    color: $white;
+    color: $white !important;
     transition: color 400ms;
   }
 
