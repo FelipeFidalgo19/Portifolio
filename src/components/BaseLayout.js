@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
 import Style from './BaseLayout.module.scss'
+import Navbar from "./Navbar";
 import Home from "./Home";
 import Portifolio from "./Portifolio";
 import {Box, Grid} from "@mui/material";
@@ -18,6 +19,7 @@ export default function BaseLayout() {
          <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
                justifyContent={'space-between'}>
             <Grid item>
+                <Navbar darkMode={darkMode} handleClick={handleClick}/>
             </Grid>
             <Grid item flexGrow={1}>
                <Routes>
@@ -28,7 +30,6 @@ export default function BaseLayout() {
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                     py={'0.1rem'} sx={{opacity: 0.9}} width={'100%'}>
-                <button onClick={() => handleClick()} >teste</button>
                   <p><strong>GitHub: </strong><a href={'https://github.com/FelipeFidalgo19'}>Felipe Fidalgo</a></p>
                   <p>&copy; 2022</p>
                </Box>
