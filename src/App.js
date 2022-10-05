@@ -1,9 +1,12 @@
 import './App.css';
-
+import BaseLayout from "./components/BaseLayout";
+import {BrowserRouter} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-        <h1>teste a aplicação</h1>
+    <div>
+    <BrowserRouter>
+      <BaseLayout/>
+    </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,39 @@
+import React, {useState} from 'react';
+import {Route, Routes} from "react-router-dom";
+import Style from './BaseLayout.module.scss'
+import Home from "./Home";
+import Portifolio from "./Portifolio";
+import {Box, Grid} from "@mui/material";
+import { HeadphonesSharp } from '@mui/icons-material';
+
+export default function BaseLayout() {
+   let [darkMode, setDarkMode] = useState(false);
+
+   function handleClick() {
+        setDarkMode(!darkMode);
+   }
+
+   return (
+      <Box className={darkMode ? Style.dark : Style.light}>
+         <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
+               justifyContent={'space-between'}>
+            <Grid item>
+            </Grid>
+            <Grid item flexGrow={1}>
+               <Routes>
+                  <Route exact path={'/'} element={<Home/>}/>
+                  <Route exact path={'/portifolio'} element={<Portifolio/>}/>
+               </Routes>
+            </Grid>
+            <Grid item>
+               <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
+                    py={'0.1rem'} sx={{opacity: 0.9}} width={'100%'}>
+                <button onClick={() => handleClick()} >teste</button>
+                  <p><strong>GitHub: </strong><a href={'https://github.com/FelipeFidalgo19'}>Felipe Fidalgo</a></p>
+                  <p>&copy; 2022</p>
+               </Box>
+            </Grid>
+         </Grid>
+      </Box>
+   )
+}
