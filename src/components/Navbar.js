@@ -14,14 +14,8 @@ const links = [
     },
     {
         name: 'Sobre mim',
-        to: '/about',
+        to: '/sobre',
         active: 'Sobre mim'
-    },
-    {
-        name: info.initials,
-        type: 'initials',
-        to: '/',
-        active: 'home'
     },
     {
         name: 'Portfolio',
