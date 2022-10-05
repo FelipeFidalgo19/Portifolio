@@ -32,8 +32,7 @@ export default function BaseLayout() {
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                     py={'0.1rem'} sx={{opacity: 0.9}} width={'100%'}>
-                  <p><strong>GitHub: </strong><a href={'https://github.com/FelipeFidalgo19'}>Felipe Fidalgo</a></p>
-                  <p>&copy; 2022</p>
+                  <p>Felipe Fidalgo &copy; 2022</p>
                </Box>
             </Grid>
          </Grid>

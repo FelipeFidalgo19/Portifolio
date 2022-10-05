@@ -1,10 +1,24 @@
 $small-device: "all and (max-width: 414px)";
 .content{
-    // background-color: aqua ;
     height: 450px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    @media #{$small-device}{
+        img{
+           width: 120px !important;
+        }
+        h1{
+            font-size: 30px !important;
+        }
+        h2{
+            font-size: 20px !important;
+        }
+        p{
+            font-size: 15px !important;
+        }
+    }
 }
 .content p{
     margin-top: 5px;
@@ -19,18 +33,34 @@ $small-device: "all and (max-width: 414px)";
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 300px;
+    height: 200px;
     
     padding: 0 25px 0 25px;
+
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
 }
 .box h1{
-    font-size: 55px;
+    font-size: 70px;
 }
 .content img{
     border-radius: 15px;
     background: linear-gradient(#55ff99, #2cb649);
-    width: 140px;
+    width: 190px;
+    transform: 0.5s;
+
+    &:hover{
+        background: linear-gradient(#2cb649,#55ff99);
+        transform: 0.5s;
+   }
 }
+
+
+
 .text-box{
     margin-left: 10px;
     align-items: center;
@@ -42,7 +72,7 @@ $small-device: "all and (max-width: 414px)";
     align-items: center;
     flex-direction: row;
     ul li{
-        margin-top: 25px;
+        margin-top: 60px;
         padding: 0 50px 0 50px;
         font-size: 15px;
         display: inline-block;
@@ -62,6 +92,6 @@ $small-device: "all and (max-width: 414px)";
     ul li:hover{
         background-color: #2cb649;
         opacity: 0.8;
-        transition: 0.1ms;
+        transition: 0.5s;
     }
 }
