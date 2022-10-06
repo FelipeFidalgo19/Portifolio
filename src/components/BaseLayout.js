@@ -9,7 +9,7 @@ import {Box, Grid} from "@mui/material";
 import { HeadphonesSharp } from '@mui/icons-material';
 
 export default function BaseLayout() {
-   let [darkMode, setDarkMode] = useState(false);
+   let [darkMode, setDarkMode] = useState(true);
 
    function handleClick() {
         setDarkMode(!darkMode);
