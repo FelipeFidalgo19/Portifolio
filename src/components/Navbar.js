@@ -43,7 +43,7 @@ export default function Navbar({darkMode, handleClick}) {
                     </Box>
                 ))}
                 <li>
-                    <Switch {...label} defaultChecked onClick={handleClick} darkMode={darkMode} />
+                    <Switch {...label} defaultChecked onClick={handleClick} darkMode={darkMode} color="default"/>
                 </li>
             </Box>
         </Box>

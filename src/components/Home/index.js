@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import "./home.mudule.scss";
 
-import perfil from "../../img/capa.png";
+import perfil from "../../img/capaedit.png";
 import js from "../../img/logos/js.png";
 import css from "../../img/logos/css3.webp";
 import html from "../../img/logos/html.webp";
@@ -57,9 +57,10 @@ export default function Home({ darkMode }) {
         </motion.div>
         <div className="social-box">
           <ul>
-            <li>Linkedin</li>
-            <li>Instagram</li>
-            <li>GitHub</li>
+
+            <a href="https://www.linkedin.com/in/felipe-fidalgo-04b622128/"><li>Linkedin</li></a>
+            <a href="https://www.instagram.com/fidalgo.fe/"><li>Instagram</li></a>
+            <a href="https://github.com/FelipeFidalgo19"><li>GitHub</li></a>
           </ul>
         </div>
       </div>

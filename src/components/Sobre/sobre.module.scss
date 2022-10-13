@@ -1,5 +1,10 @@
 $small-device: "all and (max-width: 414px)";
 
+.novo{
+    background: #55ff99 !important;
+    width: 200px !important;
+    height: 200px !important;
+}
 .content{
     font-family: Arial, Helvetica, sans-serif;
     height: 450px;
@@ -9,10 +14,27 @@ $small-device: "all and (max-width: 414px)";
     background: #00e;
 
 }
-
 h1{
-    font-size: 25px;
+    font-size: 45px !important;
 }
 p{
-    font-size: 14px;
+    font-size: 18px !important;
+}
+hr{
+    margin-top: 6px;
+    border-color: #55ff99;
+    margin-bottom: 12px;
+}
+
+.left{
+    background-color: #55ff99;
+    width: 200px;
+    height: 200px;
+    transition: all 1s ease;
+}
+.rigth{
+    background-color: #55ff99;
+    width: 200px;
+    height: 200px;
+    transition: all 1s ease;
 }
