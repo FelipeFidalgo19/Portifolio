@@ -25,6 +25,20 @@ $small-device: "all and (max-width: 414px)";
             font-size: 15px !important;
         }
     }
+
+    button{
+        background-color: #55ff99;
+        padding: 5px;
+        border-radius: 5px;
+        border: 0px;
+        margin-top: 5px;
+        cursor: pointer;
+        color: #fff;
+        &:hover{
+            opacity: 0.8;
+            transition: 0.2ms;
+        }
+    }
 }
 .content p{
     margin-top: 5px;
@@ -59,10 +73,6 @@ $small-device: "all and (max-width: 414px)";
     width: 190px;
     transform: 0.5s;
 
-    &:hover{
-        background: linear-gradient(#2cb649,#55ff99);
-        transform: 0.5s;
-   }
 }
 
 
@@ -108,11 +118,15 @@ $small-device: "all and (max-width: 414px)";
     display: flex;
     justify-content: center;
     justify-content: space-between;
+    @media #{$small-device}{
+        overflow: scroll;
+    }
     img{
         width: 100%;
     }
     
 }
+
 .circulo{
     cursor: pointer;
     border-radius: 50%;

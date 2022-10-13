@@ -3,7 +3,18 @@ import { Route, Routes } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import "./home.mudule.scss";
+
 import perfil from "../../img/capa.png";
+import js from "../../img/logos/js.png";
+import css from "../../img/logos/css3.webp";
+import html from "../../img/logos/html.webp";
+import php from "../../img/logos/php.png";
+import py from "../../img/logos/py.png";
+import react_logo from "../../img/logos/react_logo.png";
+import vscode from "../../img/logos/vscode.png";
+import figma from "../../img/logos/figma.png";
+import node from "../../img/logos/nodejs.png";
+
 import { motion } from "framer-motion";
 const variants = {
     visible: { opacity: 1 },
@@ -41,6 +52,7 @@ export default function Home({ darkMode }) {
               Meu nome é <strong>Felipe Fidalgo</strong>
             </h2>
             <p>Sou desenvolvedor full-stack e apaixonado por tecnologia</p>
+            <button>Contate-me</button>
           </motion.div>
         </motion.div>
         <div className="social-box">
@@ -52,15 +64,15 @@ export default function Home({ darkMode }) {
         </div>
       </div>
       <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}  className="content-buttom">
-          <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"} className="circulo" />
-          <img src={"https://assets.website-files.com/60d251a34163cf29e1220806/610ccf8b080e59622903db0e_react_logo.png"} style={{backgroundColor: '#fff'}} className="circulo" />
-          <img src={"https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png"} className="circulo" />
-          <img src={"https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"} className="circulo" />
-          <img src={"https://logospng.org/download/node-js/logo-node-js-1024.png"} style={{backgroundColor: '#fff'}} className="circulo" />
-          <img src={"https://cdn.icon-icons.com/icons2/2429/PNG/512/figma_logo_icon_147289.png"} className="circulo" />
-          <img src={"https://www.stickersdevs.com.br/wp-content/uploads/2022/01/python-logo-adesivo-sticker-800x800.png"} className="circulo" />
-          <img src={"https://logospng.org/download/php/logo-php-1024.png"} style={{backgroundColor: '#fff'}} className="circulo" />
-          <img src={"https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_vscode_icon_130084.png"} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={js} className="circulo" />
+          <img src={react_logo} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={css} className="circulo" />
+          <img src={html} className="circulo" />
+          <img src={node} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={figma} className="circulo" />
+          <img src={py} className="circulo" />
+          <img src={php} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={vscode} style={{backgroundColor: '#fff'}} className="circulo" />
       </motion.div>
 
     </Container>
