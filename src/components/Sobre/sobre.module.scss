@@ -32,9 +32,10 @@ hr{
     height: 200px;
     transition: all 1s ease;
 }
+
 .rigth{
-    background-color: #55ff99;
-    width: 200px;
-    height: 200px;
-    transition: all 1s ease;
+    background-color: #55ff99 !important;
+    width: 200px !important;
+    height: 200px !important;
+    transition: all 1s ease !important;
 }

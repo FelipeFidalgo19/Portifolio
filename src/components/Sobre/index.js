@@ -36,8 +36,8 @@ export default function Sobre() {
                     agora!
                   </p>
     
-              </motion.div>
           <div className={animeted=='left' ? 'left' : 'rigth'}></div>
+              </motion.div>
           </Container>
    )
 }

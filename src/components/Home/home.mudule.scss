@@ -136,5 +136,17 @@ $small-device: "all and (max-width: 414px)";
         border: 3px solid #41db72;
         transition: 0.9ms;
     }
+}
 
+.arrow-left{
+    width: 100px;
+    cursor: pointer;
+}
+  
+.arrow-area{
+    width: 1152px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
 }
