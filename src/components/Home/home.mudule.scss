@@ -4,6 +4,12 @@ $small-device: "all and (max-width: 414px)";
     flex-direction: column;
 }
 
+hr{
+    margin-top: 6px;
+    border-color: #55ff99;
+    margin-bottom: 12px;
+}
+
 .content{
     font-family: Arial, Helvetica, sans-serif;
     height: 450px;

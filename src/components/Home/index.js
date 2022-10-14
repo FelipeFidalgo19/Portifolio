@@ -62,29 +62,25 @@ export default function Home({ darkMode }) {
           <div className="social-box">
             <ul>
 
-              <a href="https://www.linkedin.com/in/felipe-fidalgo-04b622128/"><li>Linkedin</li></a>
-              <a href="https://www.instagram.com/fidalgo.fe/"><li>Instagram</li></a>
-              <a href="https://github.com/FelipeFidalgo19"><li>GitHub</li></a>
-            </ul>
-          </div>
+            <a href="https://www.linkedin.com/in/felipe-fidalgo-04b622128/"><li>Linkedin</li></a>
+            <a href="https://www.instagram.com/fidalgo.fe/"><li>Instagram</li></a>
+            <a href="https://github.com/FelipeFidalgo19"><li>GitHub</li></a>
+          </ul>
         </div>
-        <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}  className="content-buttom">
-            <img src={js} className="circulo" />
-            <img src={react_logo} style={{backgroundColor: '#fff'}} className="circulo" />
-            <img src={css} className="circulo" />
-            <img src={html} className="circulo" />
-            <img src={node} style={{backgroundColor: '#fff'}} className="circulo" />
-            <img src={figma} className="circulo" />
-            <img src={py} className="circulo" />
-            <img src={php} style={{backgroundColor: '#fff'}} className="circulo" />
-            <img src={vscode} style={{backgroundColor: '#fff'}} className="circulo" />
-        </motion.div>
-        <div className="arrow-area">
-          <ArrowBackIosNewIcon className="arrow-left"></ArrowBackIosNewIcon>
-          <ArrowForwardIosIcon></ArrowForwardIosIcon>
-        </div>
-      </>
-      }
+      </div>
+      <h2>Tecnologias</h2>
+      <hr />
+      <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}  className="content-buttom">
+          <img src={js} className="circulo" />
+          <img src={react_logo} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={css} className="circulo" />
+          <img src={html} className="circulo" />
+          <img src={node} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={figma} className="circulo" />
+          <img src={py} className="circulo" />
+          <img src={php} style={{backgroundColor: '#fff'}} className="circulo" />
+          <img src={vscode} style={{backgroundColor: '#fff'}} className="circulo" />
+      </motion.div>
 
     </Container>
   );
