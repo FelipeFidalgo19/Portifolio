@@ -2,14 +2,13 @@ import React, {useState,useRef,useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 import { motion, useMotionValue } from "framer-motion";
 import Container from "@mui/material/Container";
-import './sobre.module.scss';
+import './sobre.module.sass';
 
 
 export default function Sobre() {
 
   const [animeted , setAnimeted] = useState('rigth');
 
-  useEffect(()=>{
     setTimeout(() => {
       if(animeted=='rigth'){
         setAnimeted('left');
@@ -17,7 +16,6 @@ export default function Sobre() {
         setAnimeted('rigth');
       }
     },300);
-  })
 
 
    return (
@@ -37,7 +35,7 @@ export default function Sobre() {
                   </p>
     
               </motion.div>
-          <div className={animeted=='left' ? 'left' : 'rigth'}></div>
+          <motion.div className="novo">asdsad</motion.div>
           </Container>
    )
 }

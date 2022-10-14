@@ -64,6 +64,8 @@ export default function Home({ darkMode }) {
           </ul>
         </div>
       </div>
+      <h2>Tecnologias</h2>
+      <hr />
       <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}  className="content-buttom">
           <img src={js} className="circulo" />
           <img src={react_logo} style={{backgroundColor: '#fff'}} className="circulo" />
