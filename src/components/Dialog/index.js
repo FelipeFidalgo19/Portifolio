@@ -43,7 +43,7 @@ export default function ResponsiveDialog() {
       >
         <DialogTitle id="responsive-dialog-title">
           {"Jogo da cobrinha online"}
-        </DialogTitle>
+        </DialogTitle>  
         <DialogContent>
           <DialogContentText>
             Um pequeno jogo desenvolvimento no começo dos estudos de tecnologia, para aprender um pouco mais sobre node js, npm e websockets, 
