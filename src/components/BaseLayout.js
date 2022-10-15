@@ -29,12 +29,12 @@ export default function BaseLayout() {
                   <Route exact path={'/sobre'} element={<Sobre/>}/>
                </Routes>
             </Grid>
-            <Grid item>
+            {/* <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                     py={'0.1rem'} sx={{opacity: 0.9}} width={'100%'}>
                   <p>Felipe Fidalgo &copy; 2022</p>
                </Box>
-            </Grid>
+            </Grid> */}
          </Grid>
       </Box>
    )

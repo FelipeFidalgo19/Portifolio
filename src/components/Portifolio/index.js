@@ -3,11 +3,12 @@ import {Route, Routes} from "react-router-dom";
 import { motion } from "framer-motion";
 import Container from "@mui/material/Container";
 import './Portifolio.module.scss';
+import Dialog from '../Dialog';
 
 export default function Portifolio() {
 
    return (
-    <Container className="cont" fixed>
+    <Container  fixed>
         <motion.div initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -16,6 +17,7 @@ export default function Portifolio() {
               ease: [0, 0.71, 0.2, 1.01],
             }} className="content">
             <h1>Portifolio</h1>
+            <Dialog />
         </motion.div>
     </Container>
    )

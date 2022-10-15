@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import {Link} from "react-router-dom";
 import "./home.mudule.scss";
 
 import perfil from "../../img/capaedit.png";
@@ -16,7 +15,7 @@ import react_logo from "../../img/logos/react_logo.png";
 import vscode from "../../img/logos/vscode.png";
 import figma from "../../img/logos/figma.png";
 import node from "../../img/logos/nodejs.png";
-
+import RingLoader from "react-spinners/RingLoader";
 import { motion } from "framer-motion";
 const variants = {
     visible: { opacity: 1 },
@@ -36,7 +35,7 @@ export default function Home({ darkMode }) {
             animate={{ opacity: 1, scale: valor }}
             transition={{
               duration: 0.8,
-              delay: 0.1,
+              delay: 0.2,
               ease: [0, 0.71, 0.2, 1.01],
             }}
             style={darkMode ? { backgroundColor: "rgb(92, 92, 92)" } : { backgroundColor: "rgb(168, 168, 168)" }}>
@@ -51,12 +50,17 @@ export default function Home({ darkMode }) {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <h1>Olá Mundo! </h1>
+              <h1>Saudações!✌</h1>
               <h2>
                 Meu nome é <strong>Felipe Fidalgo</strong>
               </h2>
-              <p>Sou desenvolvedor full-stack e apaixonado por tecnologia</p>
-              <button>Contate-me</button>
+              <p>Sou desenvolvedor full-stack e desenvolvido para servir a tecnologia</p>
+              <Link to={'/sobre'}>
+                <button>Conheça-me Melhor 💭</button>
+              </Link>
+              <Link to={'/sobre'}>
+                <button>Fale Comingo🤓</button>
+              </Link>
             </motion.div>
           </motion.div>
           <div className="social-box">
@@ -70,7 +74,11 @@ export default function Home({ darkMode }) {
       </div>
       <h2>Tecnologias</h2>
       <hr />
-      <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}  className="content-buttom">
+      <motion.div initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }} transition={{
+              duration: 0.8,
+              delay: 1.3,
+              ease: [0, 0.71, 0.2, 1.01],
+            }} className="content-buttom">
           <img src={js} className="circulo" />
           <img src={react_logo} style={{backgroundColor: '#fff'}} className="circulo" />
           <img src={css} className="circulo" />
@@ -81,7 +89,8 @@ export default function Home({ darkMode }) {
           <img src={php} style={{backgroundColor: '#fff'}} className="circulo" />
           <img src={vscode} style={{backgroundColor: '#fff'}} className="circulo" />
       </motion.div>
-
+    </>
+    }
     </Container>
   );
 }
