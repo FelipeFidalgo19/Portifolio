@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Portifolio from "./Portifolio";
 import Sobre from "./Sobre";
+import Contato from "./Contato";
 import {Box, Grid} from "@mui/material";
 import { HeadphonesSharp } from '@mui/icons-material';
 
@@ -27,6 +28,7 @@ export default function BaseLayout() {
                   <Route exact path={'/'} element={<Home darkMode={darkMode}/>}/>
                   <Route exact path={'/portifolio'} element={<Portifolio/>}/>
                   <Route exact path={'/sobre'} element={<Sobre/>}/>
+                  <Route exact path={'/contato'} element={<Contato/>}/>
                </Routes>
             </Grid>
             {/* <Grid item>

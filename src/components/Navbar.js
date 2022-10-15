@@ -13,14 +13,19 @@ const links = [
         active: 'Inicio'
     },
     {
-        name: 'Sobre mim',
+        name: 'Sobre',
         to: '/sobre',
-        active: 'Sobre mim'
+        active: 'Sobre'
     },
     {
         name: 'Portfolio',
         to: '/portifolio',
         active: 'Portfolio'
+    },
+    {
+        name: 'Contato',
+        to: '/contato',
+        active: 'Contato'
     }
 ]
 const label = { inputProps: { 'aria-label': 'Color switch demo' } };
@@ -31,7 +36,7 @@ export default function Navbar({darkMode, handleClick}) {
     return (
         <Box component={'nav'} width={'100%'}>
             <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
-                 gap={{xs: '2rem', md: '8rem'}}
+                 gap={{xs: '2rem', md: '5rem'}}
                  textTransform={'lowercase'} fontSize={'1rem'}>
                 {links.map((link, index) => (
                     <Box key={index} component={'li'} className={(link.active === active && !link.type) && Style.active}

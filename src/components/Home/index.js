@@ -15,7 +15,6 @@ import react_logo from "../../img/logos/react_logo.png";
 import vscode from "../../img/logos/vscode.png";
 import figma from "../../img/logos/figma.png";
 import node from "../../img/logos/nodejs.png";
-import RingLoader from "react-spinners/RingLoader";
 import { motion } from "framer-motion";
 const variants = {
     visible: { opacity: 1 },

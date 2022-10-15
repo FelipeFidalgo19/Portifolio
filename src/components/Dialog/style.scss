@@ -33,3 +33,12 @@ $small-device: "all and (max-width: 414px)";
         margin-top: 5px;
     }
 }
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    flex-direction: column;
+}
