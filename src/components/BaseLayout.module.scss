@@ -9,7 +9,7 @@ footer {
   color: $white;
   transition: all 400ms;
 
-  a, i, li, p {
+  a, i, li, p, .textfield {
     color: $white !important;
     transition: color 400ms;
   }
@@ -27,5 +27,9 @@ footer {
   background-color: $white;
   color: $dark;
   transition: all 400ms;
+  label{ 
+    color: black;
+    border-color: black;
+  }
 }   
 

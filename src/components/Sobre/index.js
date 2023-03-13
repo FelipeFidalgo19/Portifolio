@@ -7,16 +7,6 @@ import './sobre.module.sass';
 
 export default function Sobre() {
 
-  const [animeted , setAnimeted] = useState('rigth');
-
-    setTimeout(() => {
-      if(animeted=='rigth'){
-        setAnimeted('left');
-      }else{
-        setAnimeted('rigth');
-      }
-    },300);
-
 
    return (
           <Container className="cont" fixed>
