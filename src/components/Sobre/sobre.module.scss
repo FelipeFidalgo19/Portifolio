@@ -7,12 +7,10 @@ $small-device: "all and (max-width: 414px)";
 }
 .content{
     font-family: Arial, Helvetica, sans-serif;
-    height: 450px;
     display: flex;
-    justify-content: center;
+    margin-top: 200px;
     flex-direction: column;
     background: #00e;
-
 }
 h1{
     font-size: 45px !important;

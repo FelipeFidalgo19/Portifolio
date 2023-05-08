@@ -1,28 +1,37 @@
-import React, {useState,useRef,useEffect} from 'react';
-import {Route, Routes} from "react-router-dom";
+import React, { useState, useRef, useEffect } from 'react';
+import { Route, Routes } from "react-router-dom";
 import { motion, useMotionValue } from "framer-motion";
 import Container from "@mui/material/Container";
-import './sobre.module.sass';
+import './sobre.module.scss';
 
 
 export default function Sobre() {
 
 
-   return (
-          <Container className="cont" fixed>
-              <motion.div  initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-             className="content">
+    return (
+        <Container className="cont" fixed>
+            <motion.div initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="content">
+                <div style={{marginTop:100}}>
+                    <h1>Bem-vindo ao meu site de portfólio!</h1>
+                    <hr />
+                    <p>
+                        Sou um desenvolvedor full-stack apaixonado por tecnologia, e estou animado por ter a oportunidade de compartilhar meu trabalho e minha jornada com você.<br /><br />
 
-                  <h1>Agora um pouco sobre mim...</h1>
-                  <hr />
-                  <p>
-                  Não consigo começar de outra forma que não seja contando um pouco da minha história, dês de criança sempre gostei de desmontar e montar coisas, na maioria das vezes, brinquedos quebrados do meu irmão mais 
-                  novo, adorava misturar as coisas e ver como elas funcionam, com o tempo comecei a gostar de fazer a mesma coisa em jogos de computador, para não ficar aqui contando todas as coisas da minha vida, podemos saltar para a minha escolha de carreira, meu perfil sempre foi de curioso, eu adorava a sensação de descoberta nas aulas relacionadas a ciências na escolha, ao mesmo tempo que pensava na minha escolha de carreira comecei 
-                  a me envolver com desenvolvimento web e aqui estou, desmontando e montando código, criando coisas novas a partir de tecnologias emergentes e empolgado com o que pessoas como eu, estão desenvolvendo agora!
-                  </p>
-    
-              </motion.div>
-          </Container>
-   )
+                        Desde jovem, sempre fui fascinado pela tecnologia e sua capacidade de transformar a maneira como vivemos e trabalhamos. Como desenvolvedor full-stack, tenho o privilégio de trabalhar com tecnologias inovadoras e colaborar em projetos empolgantes. Ao longo dos anos, adquiri habilidades em diversas linguagens de programação e plataformas, incluindo React Native, React js, JavaScript, PHP, Node.js, C#, Python, entre outros.<br /><br />
+
+                        Acredito que a tecnologia tem o poder de criar soluções transformadoras que impactam a vida das pessoas de maneiras positivas. Para mim, a criatividade e a inovação são essenciais para criar aplicativos e softwares que resolvam problemas complexos de forma eficiente.<br /><br />
+
+                        Neste site, você encontrará exemplos dos projetos em que trabalhei, incluindo aplicações móveis criadas com React Native, web apps desenvolvidos com React js, e soluções back-end construídas com Node.js, PHP e C#. Também tenho experiência em trabalhar com a linguagem de programação Python em projetos de análise de dados e machine learning.<br /><br />
+
+                        Espero que você aprecie o meu trabalho e sinta-se à vontade para entrar em contato comigo para discutir oportunidades de colaboração ou simplesmente compartilhar sua opinião.<br /><br />
+
+                        Obrigado por visitar meu site de portfólio!<br /><br />
+                    </p>
+                </div>
+
+            </motion.div>
+        </Container>
+    )
 }
