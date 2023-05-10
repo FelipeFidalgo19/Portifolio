@@ -29,7 +29,7 @@ export default function BaseLayout() {
                   <Route exact path={'/'} element={<Home darkMode={darkMode}/>}/>
                   <Route exact path={'/portifolio'} element={<Portifolio/>}/>
                   <Route exact path={'/sobre'} element={<Sobre/>}/>
-                  <Route exact path={'/contato'} element={<Contato/>}/>
+                  <Route exact path={'/contato'} element={<Contato darkMode={darkMode}/>}/>
                </Routes>
             </Grid>
             {/* <Grid item>

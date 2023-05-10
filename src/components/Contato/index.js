@@ -12,9 +12,10 @@ import axios from 'axios';
 
 
 
-export default function Contato() {
+export default function Contato({darkMode}) {
   const [open, setOpen] = useState(false);
-
+  const [Campos, setCampos] = useState(false);
+  
   const [nome, setNome] = useState('');
   const [assunto, setAssunto] = useState('');
   const [msg, setMsg] = useState('');
@@ -24,14 +25,26 @@ export default function Contato() {
       return;
     }
     setOpen(false);
+    setCampos(false);
   };
 
+  function handleSend(){
+    if(nome==""&&assunto==""&&msg==""){
+      setCampos(true);
+    }else{
+      setOpen(true);
+    }
+  }
 
-  const inputStyle = { input: { color: '#2cb649', width: 660 } }
+
+  const inputStyle = {color:'#2cb649', input: { color: '#2cb649', width: 660 } }
   return (
     <Container  fixed>
       <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert severity="success">Enviado com sucesso!</Alert>
+      </Snackbar>
+      <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={Campos} autoHideDuration={3000} onClose={handleClose}>
+        <Alert severity="error">Preencha todos os campos</Alert>
       </Snackbar>
       <motion.div initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -47,10 +60,10 @@ export default function Contato() {
 
           <Stack direction="column" style={{ color: '#000' }} alignItems="flex-start" marginTop={5} spacing={2}>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: 250 }}>
-              <TextField color="success" focused sx={inputStyle} label="Digite seu nome" id="custom-css-outlined-input" />
-              <TextField color="success" focused sx={inputStyle} label="Qual o Assunto?" id="custom-css-outlined-input" />
-              <TextField color="success" focused sx={inputStyle} label="Qual a sua Mensagem?" id="custom-css-outlined-input" />
-              <Button style={{ justifyContent: 'flex-start', }} color="success" variant="contained" onClick={() => setOpen(true)}>Enviar</Button>
+              <TextField color="success" onChange={(e) => setNome(e.target.value)} focused sx={inputStyle} label="Digite seu nome" id="custom-css-outlined-input" />
+              <TextField color="success" onChange={(e) => setAssunto(e.target.value)} focused sx={inputStyle} label="Qual o Assunto?" id="custom-css-outlined-input" />
+              <TextField color="success" onChange={(e) => setMsg(e.target.value)} variant='standard' row={4} multiline id="standard-multiline-static" focused sx={[inputStyle,{color:'#2cb649'}]} label="Qual a sua Mensagem?" id="custom-css-outlined-input" />
+              <Button style={{ justifyContent: 'flex-start', }} color="success" variant="contained" onClick={() => handleSend(true)}>Enviar</Button>
             </div>
           </Stack>
         </div>
