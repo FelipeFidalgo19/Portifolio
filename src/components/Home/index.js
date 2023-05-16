@@ -21,11 +21,14 @@ const variants = {
   hidden: { opacity: 0 },
 }
 
-const MotionCirculo = ({ element, val }) => {
+const MotionCirculo = ({ element }) => {
+  const [valor,setValor] = useState(1)
   return (<motion.div
+    onMouseEnter={() => setValor(1.4)}
+    onMouseLeave={() => setValor(1)}
     className=""
     initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: val }}
+    animate={{ opacity: 1, scale: valor }}
     transition={{
       duration: 0.8,
       delay: 0.2,
@@ -37,15 +40,6 @@ const MotionCirculo = ({ element, val }) => {
 
 export default function Home({ darkMode }) {
   const [valor, setVal] = useState(1);
-  const [valorCir, setValCir] = useState(1);
-  const [valorCir2, setValCir2] = useState(1);
-  const [valorCir3, setValCir3] = useState(1);
-  const [valorCir4, setValCir4] = useState(1);
-  const [valorCir5, setValCir5] = useState(1);
-  const [valorCir6, setValCir6] = useState(1);
-  const [valorCir7, setValCir7] = useState(1);
-  const [valorCir8, setValCir8] = useState(1);
-  const [valorCir9, setValCir9] = useState(1);
 
 
   return (
@@ -104,15 +98,15 @@ export default function Home({ darkMode }) {
             ease: [0, 0.71, 0.2, 1.01],
           }} className="content-buttom">
 
-            <MotionCirculo val={valorCir} element={<img src={js} onMouseEnter={() => setValCir(1.4)} onMouseLeave={() => setValCir(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir2} element={<img src={react_logo} onMouseEnter={() => setValCir2(1.4)} onMouseLeave={() => setValCir2(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir3} element={<img src={css} onMouseEnter={() => setValCir3(1.4)} onMouseLeave={() => setValCir3(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir4} element={<img src={html} onMouseEnter={() => setValCir4(1.4)} onMouseLeave={() => setValCir4(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir5} element={<img src={node} style={{ backgroundColor: '#fff' }} onMouseEnter={() => setValCir5(1.4)} onMouseLeave={() => setValCir5(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir6} element={<img src={figma} onMouseEnter={() => setValCir6(1.4)} onMouseLeave={() => setValCir6(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir7} element={<img src={py} onMouseEnter={() => setValCir7(1.4)} onMouseLeave={() => setValCir7(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir8} element={<img src={php} style={{ backgroundColor: '#fff' }} onMouseEnter={() => setValCir8(1.4)} onMouseLeave={() => setValCir8(1)}  className="circulo" />} />
-            <MotionCirculo val={valorCir9} element={<img src={vscode} style={{ backgroundColor: '#fff' }} onMouseEnter={() => setValCir9(1.4)} onMouseLeave={() => setValCir9(1)}  className="circulo" />} />
+            <MotionCirculo element={<img src={js}   className="circulo" />} />
+            <MotionCirculo element={<img src={react_logo}   className="circulo" />} />
+            <MotionCirculo element={<img src={css}   className="circulo" />} />
+            <MotionCirculo element={<img src={html}   className="circulo" />} />
+            <MotionCirculo element={<img src={node} style={{ backgroundColor: '#fff' }}   className="circulo" />} />
+            <MotionCirculo element={<img src={figma}   className="circulo" />} />
+            <MotionCirculo element={<img src={py}   className="circulo" />} />
+            <MotionCirculo element={<img src={php} style={{ backgroundColor: '#fff' }}   className="circulo" />} />
+            <MotionCirculo element={<img src={vscode} style={{ backgroundColor: '#fff' }}   className="circulo" />} />
           </motion.div>
         </>
       }
