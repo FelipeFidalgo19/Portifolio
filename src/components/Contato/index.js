@@ -10,12 +10,15 @@ import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import axios from 'axios';
 
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { db } from '../../server/FirebaseConfig';
+import { useEffect } from 'react';
 
 
-export default function Contato({darkMode}) {
+export default function Contato({ darkMode }) {
   const [open, setOpen] = useState(false);
   const [Campos, setCampos] = useState(false);
-  
+
   const [nome, setNome] = useState('');
   const [assunto, setAssunto] = useState('');
   const [msg, setMsg] = useState('');
@@ -28,18 +31,46 @@ export default function Contato({darkMode}) {
     setCampos(false);
   };
 
-  function handleSend(){
-    if(nome==""&&assunto==""&&msg==""){
-      setCampos(true);
-    }else{
+  const [todos, setTodos] = useState([]);
+  const [todo, setTodo] = useState([]);
+  const fetchPost = async () => {
+
+    await getDocs(collection(db, "mensagens"))
+      .then((querySnapshot) => {
+        const newData = querySnapshot.docs
+          .map((doc) => ({ ...doc.data(), id: doc.id }));
+        setTodos(newData);
+        console.log(todos, newData);
+      })
+
+  }
+
+  const addTodo = async (obj) => {
+    try {
+        const docRef = await addDoc(collection(db, "mensagens"), {
+          nome : nome,
+          assunto : assunto,
+          msg : msg  
+        });
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+}
+
+  function handleSend() {
+    if (nome != "" && assunto != "" && msg != "") {
+      addTodo();
       setOpen(true);
+    } else {
+      setCampos(true);
     }
   }
 
 
-  const inputStyle = {color:'#2cb649', input: { color: '#2cb649', width: 660 } }
+  const inputStyle = { color: '#2cb649', input: { color: '#2cb649', width: 660 } }
   return (
-    <Container  fixed>
+    <Container fixed>
       <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert severity="success">Enviado com sucesso!</Alert>
       </Snackbar>
@@ -53,7 +84,7 @@ export default function Contato({darkMode}) {
           delay: 0.5,
           ease: [0, 0.71, 0.2, 1.01],
         }} className="content">
-        <div style={{display:'flex',alignItems:'center',flexDirection:'column',justifyContent:'center',marginTop:'10%'}}>
+        <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', marginTop: '10%' }}>
           <h1>Contato</h1>
           <h2>Digite sua mensagem e eu entrarei em contato!</h2>
           <br />
@@ -62,7 +93,7 @@ export default function Contato({darkMode}) {
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: 250 }}>
               <TextField color="success" onChange={(e) => setNome(e.target.value)} focused sx={inputStyle} label="Digite seu nome" id="custom-css-outlined-input" />
               <TextField color="success" onChange={(e) => setAssunto(e.target.value)} focused sx={inputStyle} label="Qual o Assunto?" id="custom-css-outlined-input" />
-              <TextField color="success" onChange={(e) => setMsg(e.target.value)} variant='standard' row={4} multiline id="standard-multiline-static" focused sx={[inputStyle,{color:'#2cb649'}]} label="Qual a sua Mensagem?" id="custom-css-outlined-input" />
+              <TextField color="success" onChange={(e) => setMsg(e.target.value)} variant='standard' row={4} multiline id="standard-multiline-static" focused sx={[inputStyle, { color: '#2cb649' }]} label="Qual a sua Mensagem?" />
               <Button style={{ justifyContent: 'flex-start', }} color="success" variant="contained" onClick={() => handleSend(true)}>Enviar</Button>
             </div>
           </Stack>
