@@ -1,4 +1,4 @@
-$small-device: "all and (max-width: 414px)";
+$small-device: "all and (max-width: 500px)";
 @media #{$small-device}{
     .imgs,.descricao{
        opacity: 0; 
@@ -20,15 +20,14 @@ $small-device: "all and (max-width: 414px)";
 }
 .descricao {
     padding: 5px;
-    width: 500px;
+    width: 60vw;
+    height: auto;
     margin: -5px 0 0 0;
     background-color: #38e36e;
-    height: 50px;
     border-radius: 0px 0px 10px 10px ;
 
     img{
         width: auto;
-        height: 25px;
         margin-left: 5px;
         margin-top: 5px;
     }

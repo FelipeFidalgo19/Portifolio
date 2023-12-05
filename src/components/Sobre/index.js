@@ -13,7 +13,7 @@ export default function Sobre() {
             <motion.div initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="content">
-                <div style={{marginTop:100}}>
+                <div className="text" style={{height:500}} >
                     <h1>Bem-vindo ao meu site de portfólio!</h1>
                     <hr />
                     <p>

@@ -32,7 +32,7 @@ export default function Portifolio() {
         <hr />
         <DialogSide />
         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', marginTop: 25, marginBottom:50 }}>
-          <TextField type="password" color="success" focused sx={inputStyle} onChange={(e) => hundle(e.target.value) } label="Digite o Codigo para ver mais" id="custom-css-outlined-input" />
+          <TextField type="password" style={{ width:'60vw'}} color="success" focused sx={inputStyle} onChange={(e) => hundle(e.target.value) } label="Digite o Codigo para ver mais" id="custom-css-outlined-input" />
         </div>
           {permite == "trabalho" &&
             <div>

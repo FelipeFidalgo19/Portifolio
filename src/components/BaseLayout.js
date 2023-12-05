@@ -19,12 +19,12 @@ export default function BaseLayout() {
 
    return (
       <Box className={darkMode ? Style.dark : Style.light}>
-         <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'}
+         <Grid container display={'block'} flexDirection={'row'} minHeight={'250vh'}
                justifyContent={'space-between'}>
             <Grid item>
                 <Navbar darkMode={darkMode} handleClick={handleClick}/>
             </Grid>
-            <Grid item flexGrow={1}>
+            <Grid marginBottom={50} item flexGrow={2}>
                <Routes>
                   <Route exact path={'/'} element={<Home darkMode={darkMode}/>}/>
                   <Route exact path={'/portifolio'} element={<Portifolio/>}/>

@@ -83,7 +83,7 @@ export default function Contato({ darkMode }) {
           duration: 0.8,
           delay: 0.5,
           ease: [0, 0.71, 0.2, 1.01],
-        }} className="content">
+        }} className="content" >
         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', marginTop: '10%' }}>
           <h1>Contato</h1>
           <h2>Digite sua mensagem e eu entrarei em contato!</h2>
@@ -91,9 +91,9 @@ export default function Contato({ darkMode }) {
 
           <Stack direction="column" style={{ color: '#000' }} alignItems="flex-start" marginTop={5} spacing={2}>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: 250 }}>
-              <TextField color="success" onChange={(e) => setNome(e.target.value)} focused sx={inputStyle} label="Digite seu nome" id="custom-css-outlined-input" />
-              <TextField color="success" onChange={(e) => setAssunto(e.target.value)} focused sx={inputStyle} label="Qual o Assunto?" id="custom-css-outlined-input" />
-              <TextField color="success" onChange={(e) => setMsg(e.target.value)} variant='standard' row={4} multiline id="standard-multiline-static" focused sx={[inputStyle, { color: '#2cb649' }]} label="Qual a sua Mensagem?" />
+              <TextField style={{width:'60vw'}}  color="success" onChange={(e) => setNome(e.target.value)} focused sx={inputStyle} label="Digite seu nome" id="custom-css-outlined-input" />
+              <TextField style={{width:'60vw'}}  color="success" onChange={(e) => setAssunto(e.target.value)} focused sx={inputStyle} label="Qual o Assunto?" id="custom-css-outlined-input" />
+              <TextField style={{width:'60vw'}}  color="success" onChange={(e) => setMsg(e.target.value)} variant='standard' row={4} multiline id="standard-multiline-static" focused sx={[inputStyle, { color: '#2cb649' }]} label="Qual a sua Mensagem?" />
               <Button style={{ justifyContent: 'flex-start', }} color="success" variant="contained" onClick={() => handleSend(true)}>Enviar</Button>
             </div>
           </Stack>

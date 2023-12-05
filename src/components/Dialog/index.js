@@ -33,10 +33,10 @@ export default function ResponsiveDialog() {
   return (
     <div className='ResponsiveDialog'>
       <div className='column'>
-        <div className='row' style={{ width: '100%' }}>
+        <div className='column' style={{ width: '100%' }}>
           <div className='card'>
             <div className='imgs'>
-              <img variant="outlined" onClick={handleClickOpen} src={snake} style={{ width: 500 }} />
+              <img variant="outlined" onClick={handleClickOpen} src={snake} style={{ width: "60vw"}} />
             </div>
             <div className='descricao'>
               <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -47,7 +47,7 @@ export default function ResponsiveDialog() {
           </div>
           <div className='card'>
             <div className='imgs'>
-              <img variant="outlined" onClick={() => setChat(true)} src={chat} style={{ width: 500 }} />
+              <img variant="outlined" onClick={() => setChat(true)} src={chat} style={{ width: "60vw"}} />
             </div>
             <div className='descricao'>
               <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -57,10 +57,10 @@ export default function ResponsiveDialog() {
             </div>
           </div>
         </div>
-        <div className='row'>
-          <div className='card'>
+        <div className='column'>
+          <div className='card' >
             <div className='imgs'>
-              <img variant="outlined" onClick={() => setPlataforma(true)} src={Plataforma} style={{ width: 500 }} />
+              <img variant="outlined" onClick={() => setPlataforma(true)} src={Plataforma} style={{ width: "60vw"}} />
             </div>
             <div className='descricao'>
               <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
