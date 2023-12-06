@@ -1,9 +1,9 @@
-$small-device: "all and (max-width: 500px)";
-@media #{$small-device}{
-    .imgs,.descricao{
-       opacity: 0; 
-    }
-}
+// $small-device: "all and (max-width: 500px)";
+// @media #{$small-device}{
+//     .imgs,.descricao{
+//        opacity: 0; 
+//     }
+// }
 .imgs{
     img {
         cursor: pointer;
