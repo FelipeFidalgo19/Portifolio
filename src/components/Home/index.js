@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import "./home.mudule.scss";
 
-import perfil from "../../img/capaedit.png";
+import perfil from "../../img/perfil3-removebg-preview.png";
 import js from "../../img/logos/js.png";
 import css from "../../img/logos/css3.webp";
 import html from "../../img/logos/html.webp";
