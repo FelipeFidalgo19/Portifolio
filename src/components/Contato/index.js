@@ -9,6 +9,7 @@ import './Contato.module.scss';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import axios from 'axios';
+import { format } from 'date-fns';
 
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { db } from '../../server/FirebaseConfig';
@@ -50,7 +51,9 @@ export default function Contato({ darkMode }) {
         const docRef = await addDoc(collection(db, "mensagens"), {
           nome : nome,
           assunto : assunto,
-          msg : msg  
+          msg : msg,
+          data : format(new Date(),'dd/MM/yyyy')
+
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {

@@ -6,8 +6,8 @@ import Home from "./Home";
 import Portifolio from "./Portifolio";
 import Sobre from "./Sobre";
 import Contato from "./Contato";
-   import {Box, Grid} from "@mui/material";
-   
+import {Box, Grid} from "@mui/material";
+
 import { HeadphonesSharp } from '@mui/icons-material';
 
 export default function BaseLayout() {
@@ -32,7 +32,7 @@ export default function BaseLayout() {
                   <Route exact path={'/contato'} element={<Contato darkMode={darkMode}/>}/>
                </Routes>
             </Grid>
-            {/* <Grid item>
+            {/*<Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
                     py={'0.1rem'} sx={{opacity: 0.9}} width={'100%'}>
                   <p>Felipe Fidalgo &copy; 2022</p>
