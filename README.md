@@ -1,4 +1,4 @@
 ### Meu Portifolio
 
-![image](https://user-images.githubusercontent.com/49208754/196006426-459fe0e9-b99f-486e-815d-ea2380428663.png)
-
+Apenas uma apresentação pessoal 👾
+![portifolio](https://github.com/FelipeFidalgo19/Portifolio/assets/49208754/234ffa00-95f1-4863-ba32-e8159fad4838)
