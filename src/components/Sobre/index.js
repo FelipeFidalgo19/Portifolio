@@ -54,7 +54,7 @@ const ThreeScene = () => {
             renderer.render(scene, camera);
             // Girar o modelo continuamente
             if (modelRef.current) {
-                modelRef.current.rotation.y += 0.01; // Ajuste a velocidade de rotação conforme necessário
+                modelRef.current.rotation.y += 0.001; // Ajuste a velocidade de rotação conforme necessário
                 if(camera.position.y!=0.7799999999999994){
                     camera.position.y -= 0.01; 
                 }
