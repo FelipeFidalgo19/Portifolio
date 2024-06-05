@@ -13,6 +13,7 @@ import chat from '../../img/portfolio/chat.png'
 import Plataforma from '../../img/portfolio/Plataforma.png'
 import cirurgico from '../../img/portfolio/agendamentocirurgico.png'
 import treinamento from '../../img/portfolio/agendamentotreinamento.png'
+import crm from '../../img/portfolio/crm.png'
 import { redirect } from 'react-router-dom';
 
 export default function ResponsiveDialog() {
@@ -21,6 +22,8 @@ export default function ResponsiveDialog() {
   const [plataforma, setPlataforma] = React.useState(false);
   const [agCirurgico, setCirurgico] = React.useState(false);
   const [Enfermagem, setEnfermagem] = React.useState(false);
+  const [Treinamentos, setTreinamentos] = React.useState(false);
+  const [Crm, setCrm] = React.useState(false);
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -52,7 +55,21 @@ export default function ResponsiveDialog() {
         <div className='row'>
           <div className='card'>
             <div className='imgs'>
-              <img variant="outlined" onClick={() => setCirurgico(true)} src={treinamento} style={{ width: "60vw"}} />
+              <img variant="outlined" onClick={() => setTreinamentos(true)} src={treinamento} style={{ width: "60vw"}} />
+            </div>
+            <div className='descricao'>
+              <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+              <img alt="css" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" />
+              <img alt="mysql" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"></img>
+              <img alt="php" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"></img>
+              <img alt="html" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"></img>
+            </div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='card'>
+            <div className='imgs'>
+              <img variant="outlined" onClick={() => setCrm(true)} src={crm} style={{ width: "60vw"}} />
             </div>
             <div className='descricao'>
               <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -108,6 +125,49 @@ export default function ResponsiveDialog() {
             Visitar ✅
           </Button> */}
           <Button onClick={() => setEnfermagem(false)} autoFocus>
+            Fechar ❌
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <Dialog
+        fullScreen={fullScreen}
+        open={Treinamentos}
+        onClose={() => setTreinamentos(false)}
+        aria-labelledby="responsive-dialog-title"
+      >
+        <DialogTitle id="responsive-dialog-title">
+          {"Um aplicativo para enfermagem"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+          É uma ferramenta para realizar agendamentos de treinamentos de outro sistema, foi desenvolvido em PHP, javascript e com banco firebird
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setTreinamentos(false)} autoFocus>
+            Fechar ❌
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <Dialog
+        fullScreen={fullScreen}
+        open={Crm}
+        onClose={() => setCrm(false)}
+        aria-labelledby="responsive-dialog-title"
+      >
+        <DialogTitle id="responsive-dialog-title">
+          {"CRM - Financeira"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+          Essa aplicação lida com a gestão de uma financeira, utilizando uma hospedagem VPS com apache para servir o PHP, e para algumas funções em especifico é utilizado javascript para tornar tudo mais dinamico!
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          {/* <Button autoFocus onClick={() => window.location.href = "https://snakemult.herokuapp.com/"}>
+            Visitar ✅
+          </Button> */}
+          <Button onClick={() => setCrm(false)} autoFocus>
             Fechar ❌
           </Button>
         </DialogActions>
