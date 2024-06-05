@@ -12,6 +12,7 @@ import snake from '../../img/portfolio/snake.png'
 import chat from '../../img/portfolio/chat.png'
 import Plataforma from '../../img/portfolio/Plataforma.png'
 import cirurgico from '../../img/portfolio/agendamentocirurgico.png'
+import treinamento from '../../img/portfolio/agendamentotreinamento.png'
 import { redirect } from 'react-router-dom';
 
 export default function ResponsiveDialog() {
@@ -37,7 +38,21 @@ export default function ResponsiveDialog() {
         <div className='row'>
           <div className='card'>
             <div className='imgs'>
-              <img variant="outlined" onClick={() => setCirurgico(true)} src={cirurgico} style={{ width: 500 }} />
+              <img variant="outlined" onClick={() => setCirurgico(true)} src={cirurgico} style={{ width: "60vw"}} />
+            </div>
+            <div className='descricao'>
+              <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+              <img alt="css" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" />
+              <img alt="mysql" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"></img>
+              <img alt="php" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"></img>
+              <img alt="html" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"></img>
+            </div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='card'>
+            <div className='imgs'>
+              <img variant="outlined" onClick={() => setCirurgico(true)} src={treinamento} style={{ width: "60vw"}} />
             </div>
             <div className='descricao'>
               <img alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
