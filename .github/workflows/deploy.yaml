@@ -3,7 +3,7 @@ name: Deploy
 on: pull_request
 
 jobs: 
-  continuos-integration:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -11,10 +11,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 22.
-      - name: run install, build and test
+      - name: run install, build 
         run: |
           npm install
           npm run build
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
       - name: Deploy using SCP
-        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./build/* ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:~/react-app
+        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:~/react-app
