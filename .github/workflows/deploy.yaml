@@ -15,7 +15,7 @@ jobs:
         run: |
           echo "SSH_USER=${{secrets.SSH_USER}}"
           echo "SSH_HOST=${{secrets.SSH_HOST}}"
-      - name: run install, build 
+      - name: run install, build
         run: |
           npm install
           npm run build
