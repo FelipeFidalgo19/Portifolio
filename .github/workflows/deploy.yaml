@@ -11,7 +11,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 22.
-      - name: Debug SSH Variables
+      - name: Debug SSH Variables 
         run: |
           echo "SSH_USER=${{secrets.SSH_USER}}"
           echo "SSH_HOST=${{secrets.SSH_HOST}}"
