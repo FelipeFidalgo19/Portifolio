@@ -21,5 +21,7 @@ jobs:
           npm run build
           mkdir -p ~/.ssh
           printf "%s" "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
       - name: Deploy using SCP
         run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./build/* ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}:~/react-app
