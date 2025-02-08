@@ -89,7 +89,7 @@ export default function Contato({ darkMode }) {
         }} className="content" >
         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', marginTop: '10%' }}>
           <h1>Contato</h1>
-          <h2>Digite sua mensagem e eu entrarei em contato!</h2>
+          <h2>Digite sua mensagem e eu entrarei em contato:</h2>
           <br />
 
           <Stack direction="column" style={{ color: '#000' }} alignItems="flex-start" marginTop={5} spacing={2}>
