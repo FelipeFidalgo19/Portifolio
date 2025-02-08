@@ -20,8 +20,7 @@ jobs:
           npm install
           npm run build
           mkdir -p ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
+          printf "%s" "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa chmod 600 ~/.ssh/id_rsa
           ls
       - name: Deploy using SCP
         run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./build/* root@191.252.221.251:~/
