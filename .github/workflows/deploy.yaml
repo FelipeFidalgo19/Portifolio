@@ -20,7 +20,6 @@ jobs:
           npm install
           npm run build
           mkdir -p ~/.ssh
-          printf "%s" "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           chmod 700 ~/.ssh
           ls
